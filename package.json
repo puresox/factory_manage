@@ -1,0 +1,25 @@
+{
+  "name": "factory_manage",
+  "version": "0.0.1",
+  "description": "使用electron写桌面应用入门",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package": "electron-packager ./ factory_manage --platform=win32 --arch=all --overwrite --ignore=node_modules --ignore=.gitignore --download.mirror=https://npm.taobao.org/mirrors/electron/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puresox/factory_manage.git"
+  },
+  "author": "puresox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puresox/factory_manage/issues"
+  },
+  "homepage": "https://github.com/puresox/factory_manage#readme",
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-packager": "^8.6.0"
+  }
+}
