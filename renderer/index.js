@@ -9,8 +9,8 @@ const {
 
 document.getElementById('introduction').addEventListener('click', () => {
   let win = new BrowserWindow({
-    width: 800,
-    height: 460,
+    width: 1000,
+    height: 600,
   });
   win.on('close', () => {
     win = null;
