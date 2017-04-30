@@ -2,89 +2,355 @@
 <html lang="en">
 
 <head>
-    <title>介绍</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.bootcss.com/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+    <title>新建表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../public/css/materialize.min.css" rel="stylesheet">
+    <style>
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            height: 50px !important;
+        }
+
+        .validate {
+            height: 30px !important;
+        }
+
+        table .input-field {
+            margin-top: 0px !important;
+            height: 30px !important;
+        }
+    </style>
 </head>
 
 <body>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/materialize/0.98.2/js/materialize.min.js"></script>
-
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <!-- normal script imports etc  -->
+    <script src="../../public/js/jquery-3.2.1.min.js"></script>
+    <script src="../../public/js/materialize.min.js"></script>
+    <script src="../../public/js/angular.min.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
 
     <form>
-        <table class="striped">
+        <div class="row">
+            <div class="col s2">
+                <div class="input-field">
+                    <input id="year" type="number" class="validate">
+                    <label for="year">年份</label>
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="input-field">
+                    <input id="month" type="number" class="validate">
+                    <label for="month">月份</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <h5 class='center-align' style="margin-top: 20px;">月度外协评价表</h5>
+            </div>
+            <div class="col s4">
+                <a class="waves-effect waves-light btn" id="save" style="margin-top: 15px;"><i class="material-icons right">cloud</i>保存</a>
+            </div>
+        </div>
+        <table class="highlight centered">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>A</th>
-                    <th>B</th>
-                    <th>C</th>
+                    <th>外协单位</th>
+                    <th>航亚</th>
+                    <th>泽川</th>
+                    <th>航跃</th>
+                    <th>跃峰</th>
+                    <th>振邦</th>
                 </tr>
             </thead>
-
-            <tbody>
+            <tbody ng-app="" ng-init="">
                 <tr>
-                    <td>1</td>
+                    <td>生产情况</td>
                     <td>
                         <div class="input-field">
-                            <input id="A1" type="text" class="validate">
+                            <input id="A1" type="number" class="validate" ng-model="A1">
                             <label for="A1"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="B1" type="text" class="validate">
+                            <input id="B1" type="number" class="validate" ng-model="B1">
                             <label for="B1"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="C1" type="text" class="validate">
+                            <input id="C1" type="number" class="validate" ng-model="C1">
                             <label for="C1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="D1" type="number" class="validate" ng-model="D1">
+                            <label for="D1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="E1" type="number" class="validate" ng-model="E1">
+                            <label for="E1"></label>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td>质量情况</td>
                     <td>
                         <div class="input-field">
-                            <input id="A2" type="text" class="validate">
+                            <input id="A2" type="number" class="validate" ng-model="A2">
                             <label for="A2"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="B2" type="text" class="validate">
+                            <input id="B2" type="number" class="validate" ng-model="B2">
                             <label for="B2"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="C2" type="text" class="validate">
+                            <input id="C2" type="number" class="validate" ng-model="C2">
                             <label for="C2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="D2" type="number" class="validate" ng-model="D2">
+                            <label for="D2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="E2" type="number" class="validate" ng-model="E2">
+                            <label for="E2"></label>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td>工艺执行</td>
                     <td>
                         <div class="input-field">
-                            <input id="A3" type="text" class="validate">
+                            <input id="A3" type="number" class="validate" ng-model="A3">
                             <label for="A3"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="B3" type="text" class="validate">
+                            <input id="B3" type="number" class="validate" ng-model="B3">
                             <label for="B3"></label>
                         </div>
                     </td>
                     <td>
                         <div class="input-field">
-                            <input id="C3" type="text" class="validate">
+                            <input id="C3" type="number" class="validate" ng-model="C3">
                             <label for="C3"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="D3" type="number" class="validate" ng-model="D3">
+                            <label for="D3"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="E3" type="number" class="validate" ng-model="E3">
+                            <label for="E3"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生产现场</td>
+                    <td>
+                        <div class="input-field">
+                            <input id="A4" type="number" class="validate" ng-model="A4">
+                            <label for="A4"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="B4" type="number" class="validate" ng-model="B4">
+                            <label for="B4"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="C4" type="number" class="validate" ng-model="C4">
+                            <label for="C4"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="D4" type="number" class="validate" ng-model="D4">
+                            <label for="D4"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="E4" type="number" class="validate" ng-model="E4">
+                            <label for="E4"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>配合度</td>
+                    <td>
+                        <div class="input-field">
+                            <input id="A5" type="number" class="validate" ng-model="A5">
+                            <label for="A5"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="B5" type="number" class="validate" ng-model="B5">
+                            <label for="B5"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="C5" type="number" class="validate" ng-model="C5">
+                            <label for="C5"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="D5" type="number" class="validate" ng-model="D5">
+                            <label for="D5"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="E5" type="number" class="validate" ng-model="E5">
+                            <label for="E5"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>总分</td>
+                    <td id="A">{{A1+A2+A3+A4+A5}}</td>
+                    <td id="B">{{B1+B2+B3+B4+B5}}</td>
+                    <td id="C">{{C1+C2+C3+C4+C5}}</td>
+                    <td id="D">{{D1+D2+D3+D4+D5}}</td>
+                    <td id="E">{{E1+E2+E3+E4+E5}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="highlight centered">
+            <thead>
+                <tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>质量情况</td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2A1" type="number" class="validate">
+                            <label for="2A1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2B1" type="number" class="validate">
+                            <label for="2B1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2C1" type="number" class="validate">
+                            <label for="2C1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2D1" type="number" class="validate">
+                            <label for="2D1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2E1" type="number" class="validate">
+                            <label for="2E1"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>工艺执行</td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2A2" type="number" class="validate">
+                            <label for="2A2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2B2" type="number" class="validate">
+                            <label for="2B2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2C2" type="number" class="validate">
+                            <label for="2C2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2D2" type="number" class="validate">
+                            <label for="2D2"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="2E2" type="number" class="validate">
+                            <label for="2E2"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生产现场</td>
+                    <td>
+                        <div class="input-field">
+                            <input id="A1" type="number" class="validate">
+                            <label for="A1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="B1" type="number" class="validate">
+                            <label for="B1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="C1" type="number" class="validate">
+                            <label for="C1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="C1" type="number" class="validate">
+                            <label for="C1"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field">
+                            <input id="C1" type="number" class="validate">
+                            <label for="C1"></label>
                         </div>
                     </td>
                 </tr>
@@ -92,5 +358,9 @@
         </table>
     </form>
 </body>
+
+<script>
+    require('../../renderer/grid/newGrid')
+</script>
 
 </html>

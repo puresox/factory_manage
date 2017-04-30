@@ -3,3 +3,4 @@ factory_manage-win32-ia32
 factory_manage-win32-x64
 .vscode
 .eslintrc.json
+db
