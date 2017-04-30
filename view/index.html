@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../public/css/materialize.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Insert this line above script imports  -->
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+  </script>
+  <!-- normal script imports etc  -->
+  <script src="../public/js/jquery-3.2.1.min.js"></script>
+  <script src="../public/js/materialize.min.js"></script>
+  <!-- Insert this line after script imports -->
+  <script>
+    if (window.module) module = window.module;
+  </script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s4 push-s4">
+        <a class="waves-effect waves-light btn col s12" id="introduction">介绍</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s4 push-s4">
+        <a class="waves-effect waves-light btn col s12" id="recommend">推荐</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s4 push-s4">
+        <a class="waves-effect waves-light btn col s12" id="grid">表单</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s4 push-s4">
+        <a class="waves-effect waves-light btn col s12" id="count">计算</a>
+      </div>
+    </div>
+
+</body>
+
+<script>
+  require('../renderer/index')
+</script>
+
+</html>

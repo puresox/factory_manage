@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>介绍页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/css/materialize.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <!-- normal script imports etc  -->
+    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <script src="../public/js/materialize.min.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
+
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2" id="echarts">查看公司分析图</a>
+        </div>
+        <div class="carousel-item blue white-text" href="#one!" style="background-image:url(http://lorempixel.com/800/400/food/1)">
+            <h2>航亚</h2>
+            <p class="white-text">我们将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力。我们还在全球范围内开展社区公益和救助行动，参加了印尼海啸、海地及汶川地震等重大自然灾害救助，并成立了中国规模最大的“关爱儿童专项基金”。</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#two!" style="background-image:url(http://lorempixel.com/800/400/food/2)">
+            <h2>泽川</h2>
+            <p class="white-text">我们将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力。我们还在全球范围内开展社区公益和救助行动，参加了印尼海啸、海地及汶川地震等重大自然灾害救助，并成立了中国规模最大的“关爱儿童专项基金”。</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#three!" style="background-image:url(http://lorempixel.com/800/400/food/3)">
+            <h2>航跃</h2>
+            <p class="white-text">我们将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力。我们还在全球范围内开展社区公益和救助行动，参加了印尼海啸、海地及汶川地震等重大自然灾害救助，并成立了中国规模最大的“关爱儿童专项基金”。</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!" style="background-image:url(http://lorempixel.com/800/400/food/4)">
+            <h2>跃峰</h2>
+            <p class="white-text">我们将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力。我们还在全球范围内开展社区公益和救助行动，参加了印尼海啸、海地及汶川地震等重大自然灾害救助，并成立了中国规模最大的“关爱儿童专项基金”。</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#five!" style="background-image:url(http://lorempixel.com/800/400/food/5)">
+            <h2>振邦</h2>
+            <p class="white-text">我们将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力。我们还在全球范围内开展社区公益和救助行动，参加了印尼海啸、海地及汶川地震等重大自然灾害救助，并成立了中国规模最大的“关爱儿童专项基金”。</p>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    require('../renderer/introduction')
+</script>
+
+</html>
