@@ -36,15 +36,11 @@ function createWindow() {
     // when you should delete the corresponding element.
     win = null;
   });
-
-  /* ipcMain.on('route-message', (event, arg) => {
-    win.loadURL(url.format({
-      pathname: path.join(__dirname, `view/${arg}.html`),
-      protocol: 'file:',
-      slashes: true
-    }))
-  })*/
 }
+
+ipcMain.on('save-message', (event, arg) => {
+  event.sender.send('save-reply', arg)
+})
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

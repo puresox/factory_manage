@@ -4,7 +4,7 @@
 const BrowserWindow = require('electron').remote.BrowserWindow;
 const path = require('path');
 const {
-    ipcRenderer,
+  ipcRenderer,
 } = require('electron');
 
 document.getElementById('introduction').addEventListener('click', () => {
