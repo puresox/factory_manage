@@ -2,17 +2,91 @@
 <html lang="en">
 
 <head>
-    <title>介绍</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.bootcss.com/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+    <title>计算页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/css/materialize.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <!-- normal script imports etc  -->
+    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <script src="../public/js/materialize.min.js"></script>
+    <script src="../public/js/echarts.min.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
 
+<div class="row" >
+    
+    <form class="col s12" >
+        <div class="row">
+            <div class="input-field col s1 offset-s3">
+                <input value="1" name="num" id="arr0" type="number" >
+            </div>
+            <div class="input-field col s1">
+                <input value="0" name="num"   id="arr1" type="number" >
+            </div>
+            <div class="input-field col s1">
+                <input value="1" name="num"   id="arr2" type="number" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s1">
+                <input value="A" name="num"  type="text" >
+            </div>
+            <div class="input-field col s1">
+                <input value="B" name="num"   type="text" >
+            </div>
+            <div class="input-field col s1">
+                <input value="C" name="num"   type="text" >
+            </div>
+            <div class="input-field col s1 ">
+                <input value="0" name="num"  id="arr3"  type="number" >
+            </div>
+            <div class="input-field col s1 ">
+                <input value="1" name="num"  id="arr4"  type="number" >
+            </div>
+            <div class="input-field col s1 ">
+                <input value="1" name="num"  id="arr5"  type="number" >
+            </div>
+            <div>
+                <a class ="waves-effect waves-light btn col s1 offset-s1" id="button" 
+                style="width:75px;height:30px;margin-top:25px">=</a>
+            </div>
+            <div class="out-field col s1 offset-s1" style="margin-top:25px">
+                <output value="a" id="result1"  type="text" >a
+            </div>
+            <div class="out-field col s1" style="margin-top:25px ">
+                <output value="b" id="result2"  type="text" >b
+            </div>
+            <div class="out-field col s1" style="margin-top:25px">
+                <output value="c" id="result3"  type="text" >c
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s1 offset-s3">
+                <input value="1" name="num"  id="arr6"  type="number" >
+            </div>
+            <div class="input-field col s1">
+                <input value="1" name="num" id="arr7"  type="number" >
+            </div>
+            <div class="input-field col s1">
+                <input value="1" name="num"  id="arr8" type="number" >
+            </div>
+        </div>
+    </form>
+</div>
 
-</body>
-
+<script>
+  require('../renderer/count')
+</script>
 </html>
