@@ -2,17 +2,79 @@
 <html lang="en">
 
 <head>
-    <title>介绍</title>
+    <title>推荐</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.bootcss.com/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+    <link href="../public/css/materialize.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <!-- normal script imports etc  -->
+    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <script src="../public/js/materialize.min.js"></script>
+    <script src="../public/js/echarts.min.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
+    <div class="row">
+        <div class="col s6">
+            <div id="main" style="width: 500px;height:300px;"></div>
+        </div>
+        <div class="col s4">
+            <div class="col s4">
+                <h2 id="name">提示</h2>
+                <p id="introduction">键入技术指标</p>
+            </div>
+            <div class="input-field col s4">
+                <input id="first_jishu" type="text" class="validate" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                <label for="first_jishu">技术一</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="second_jishu" type="text" class="validate" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                <label for="second_jishu">技术二</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="thrid_jishu" type="text" class="validate" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                <label for="thrid_jishu">技术三</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="four_jishu" type="text" class="validate" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                <label for="four_jishu">技术四</label>
+            </div>
+            <div class="col s6 offset-s6">
+                <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">提交
+        <i class="material-icons right">send</i>
+         </button>
+            </div>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4 offset-s6 ">
+            <div class="card-panel teal">
+                <span class="white-text">
+                 <p id="tuijian"> 我们向你推荐          </p>
+          </span>
+            </div>
+        </div>
+    </div>
+    </div>
 
 </body>
+<script>
+        require('../renderer/recommend')
+</script>
 
 </html>
