@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/puresox/factory_manage#readme",
   "devDependencies": {
-    "electron": "^1.6.6",
-    "electron-packager": "^8.6.0"
+    "electron": "^1.6.7",
+    "electron-packager": "^8.6.0",
+    "grunt": "^1.0.1",
+    "grunt-electron-installer": "^2.1.0"
   },
   "dependencies": {
     "nedb": "^1.8.0"
